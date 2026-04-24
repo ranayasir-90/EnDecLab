@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classical Ciphers Lab | Learn Caesar, Affine, Rail Fence, Transposition & ROT13 | EnDecLab</title>
+  
+  <!-- Page-specific SEO -->
+  <meta name="description" content="Interactive Classical Ciphers Lab - Master Caesar, Affine, Rail Fence, Transposition, ROT13 & One-Time Pad ciphers with step-by-step visualization. Free cryptography learning.">
+  <meta name="keywords" content="caesar cipher, affine cipher, rail fence cipher, transposition cipher, ROT13, one-time pad, encrypt text, decrypt text, cipher solver, classical ciphers, online cipher, cipher tool, cipher calculator, cipher decoder, cipher encoder, cipher practice, cipher quiz, cipher challenge, cipher for students, cipher for beginners, cipher tutorial, cipher learning, cipher education, cipher demonstration, cipher simulation, cipher visualization, cipher assignment, cipher homework, cipher project, cipher examples, cipher methods, cipher techniques, cipher algorithms, cipher systems, cipher solutions, cipher software, cipher app, cipher website, cipher online, cipher Hindi, cipher Urdu, cipher Pakistan, cipher India, cipher Asia, cipher world, cipher global, cipher international, cipher Urdu mein, cipher Hindi mein, cipher tutorial Hindi, cipher tutorial Urdu, cipher learning Hindi, cipher learning Urdu, cipher education Hindi, cipher education Urdu, cipher project Hindi, cipher project Urdu, cipher website Hindi, cipher website Urdu, cipher app Hindi, cipher app Urdu, cipher online Hindi, cipher online Urdu, cipher tools Hindi, cipher tools Urdu, cipher experiments Hindi, cipher experiments Urdu, cipher exercises Hindi, cipher exercises Urdu, cipher practice Hindi, cipher practice Urdu, cipher examples Hindi, cipher examples Urdu, cipher concepts Hindi, cipher concepts Urdu, cipher basics Hindi, cipher basics Urdu, cipher fundamentals Hindi, cipher fundamentals Urdu, cipher techniques Hindi, cipher techniques Urdu, cipher methods Hindi, cipher methods Urdu, cipher algorithms Hindi, cipher algorithms Urdu, cipher systems Hindi, cipher systems Urdu, cipher solutions Hindi, cipher solutions Urdu, cipher software Hindi, cipher software Urdu, cipher education Hindi, cipher education Urdu, cipher learning Hindi, cipher learning Urdu, cipher teaching Hindi, cipher teaching Urdu, cipher demonstration Hindi, cipher demonstration Urdu, cipher simulation Hindi, cipher simulation Urdu, cipher visualization Hindi, cipher visualization Urdu, cipher challenge Hindi, cipher challenge Urdu, cipher quiz Hindi, cipher quiz Urdu, cipher test Hindi, cipher test Urdu, cipher exam Hindi, cipher exam Urdu, cipher assignment Hindi, cipher assignment Urdu, cipher homework Hindi, cipher homework Urdu, cipher research Hindi, cipher research Urdu, cipher innovation Hindi, cipher innovation Urdu, cipher development Hindi, cipher development Urdu, cipher engineering Hindi, cipher engineering Urdu, cipher science Hindi, cipher science Urdu, cipher technology Hindi, cipher technology Urdu, cipher trends Hindi, cipher trends Urdu, cipher news Hindi, cipher news Urdu, cipher updates Hindi, cipher updates Urdu, cipher community Hindi, cipher community Urdu, cipher forum Hindi, cipher forum Urdu, cipher support Hindi, cipher support Urdu, cipher help Hindi, cipher help Urdu, cipher FAQ Hindi, cipher FAQ Urdu, cipher documentation Hindi, cipher documentation Urdu, cipher guide Hindi, cipher guide Urdu, cipher manual Hindi, cipher manual Urdu, cipher reference Hindi, cipher reference Urdu, cipher glossary Hindi, cipher glossary Urdu, cipher dictionary Hindi, cipher dictionary Urdu, cipher terminology Hindi, cipher terminology Urdu, cipher standards Hindi, cipher standards Urdu, cipher compliance Hindi, cipher compliance Urdu, cipher certification Hindi, cipher certification Urdu, cipher accreditation Hindi, cipher accreditation Urdu, cipher recognition Hindi, cipher recognition Urdu, cipher awards Hindi, cipher awards Urdu, cipher achievements Hindi, cipher achievements Urdu, cipher success Hindi, cipher success Urdu, cipher excellence Hindi, cipher excellence Urdu, cipher leadership Hindi, cipher leadership Urdu, cipher inspiration Hindi, cipher inspiration Urdu, cipher motivation Hindi, cipher motivation Urdu, cipher passion Hindi, cipher passion Urdu, cipher creativity Hindi, cipher creativity Urdu, cipher innovation Hindi, cipher innovation Urdu, cipher vision Hindi, cipher vision Urdu, cipher mission Hindi, cipher mission Urdu, cipher values Hindi, cipher values Urdu, cipher goals Hindi, cipher goals Urdu, cipher objectives Hindi, cipher objectives Urdu, cipher strategy Hindi, cipher strategy Urdu, cipher planning Hindi, cipher planning Urdu, cipher management Hindi, cipher management Urdu, cipher organization Hindi, cipher organization Urdu, cipher administration Hindi, cipher administration Urdu, cipher operation Hindi, cipher operation Urdu, cipher implementation Hindi, cipher implementation Urdu, cipher execution Hindi, cipher execution Urdu, cipher monitoring Hindi, cipher monitoring Urdu, cipher evaluation Hindi, cipher evaluation Urdu, cipher assessment Hindi, cipher assessment Urdu, cipher review Hindi, cipher review Urdu, cipher feedback Hindi, cipher feedback Urdu, cipher improvement Hindi, cipher improvement Urdu, cipher optimization Hindi, cipher optimization Urdu, cipher enhancement Hindi, cipher enhancement Urdu, cipher growth Hindi, cipher growth Urdu, cipher expansion Hindi, cipher expansion Urdu, cipher outreach Hindi, cipher outreach Urdu, cipher impact Hindi, cipher impact Urdu, cipher contribution Hindi, cipher contribution Urdu, cipher collaboration Hindi, cipher collaboration Urdu, cipher partnership Hindi, cipher partnership Urdu, cipher network Hindi, cipher network Urdu, cipher connection Hindi, cipher connection Urdu, cipher relationship Hindi, cipher relationship Urdu, cipher engagement Hindi, cipher engagement Urdu, cipher interaction Hindi, cipher interaction Urdu, cipher communication Hindi, cipher communication Urdu, cipher presentation Hindi, cipher presentation Urdu, cipher publication Hindi, cipher publication Urdu, cipher dissemination Hindi, cipher dissemination Urdu, cipher promotion Hindi, cipher promotion Urdu, cipher marketing Hindi, cipher marketing Urdu, cipher branding Hindi, cipher branding Urdu, cipher reputation Hindi, cipher reputation Urdu, cipher credibility Hindi, cipher credibility Urdu, cipher trust Hindi, cipher trust Urdu, cipher reliability Hindi, cipher reliability Urdu, cipher quality Hindi, cipher quality Urdu, cipher performance Hindi, cipher performance Urdu, cipher efficiency Hindi, cipher efficiency Urdu, cipher effectiveness Hindi, cipher effectiveness Urdu, cipher productivity Hindi, cipher productivity Urdu, cipher sustainability Hindi, cipher sustainability Urdu, cipher responsibility Hindi, cipher responsibility Urdu, cipher accountability Hindi, cipher accountability Urdu, cipher transparency Hindi, cipher transparency Urdu, cipher ethics Hindi, cipher ethics Urdu, cipher integrity Hindi, cipher integrity Urdu, cipher professionalism Hindi, cipher professionalism Urdu, cipher expertise Hindi, cipher expertise Urdu, cipher experience Hindi, cipher experience Urdu, cipher knowledge Hindi, cipher knowledge Urdu, cipher skills Hindi, cipher skills Urdu, cipher talent Hindi, cipher talent Urdu, cipher potential Hindi, cipher potential Urdu, cipher opportunity Hindi, cipher opportunity Urdu, cipher challenge Hindi, cipher challenge Urdu, cipher solution Hindi, cipher solution Urdu, cipher result Hindi, cipher result Urdu, cipher outcome Hindi, cipher outcome Urdu, cipher benefit Hindi, cipher benefit Urdu, cipher value Hindi, cipher value Urdu, cipher advantage Hindi, cipher advantage Urdu, cipher strength Hindi, cipher strength Urdu, cipher weakness Hindi, cipher weakness Urdu, cipher threat Hindi, cipher threat Urdu, cipher risk Hindi, cipher risk Urdu, cipher issue Hindi, cipher issue Urdu, cipher problem Hindi, cipher problem Urdu, cipher concern Hindi, cipher concern Urdu, cipher question Hindi, cipher question Urdu, cipher answer Hindi, cipher answer Urdu, Instagram endeclab.official, LinkedIn endeclab, Facebook endeclab, social media">
+  
+  <!-- Open Graph for Cipher Lab -->
+  <meta property="og:title" content="Classical Ciphers Lab | Learn Caesar, Affine, Rail Fence & More">
+  <meta property="og:description" content="Interactive Classical Ciphers Lab - Learn Caesar, Affine, Rail Fence, Transposition, ROT13, and One-Time Pad ciphers with step-by-step visualization.">
+  <meta property="og:url" content="https://endeclab.xyz/cipher-lab">
+  
+  <!-- Twitter Card for Cipher Lab -->
+  <meta property="twitter:title" content="Classical Ciphers Lab | Learn Caesar, Affine, Rail Fence & More">
+  <meta property="twitter:description" content="Interactive Classical Ciphers Lab - Learn Caesar, Affine, Rail Fence, Transposition, ROT13, and One-Time Pad ciphers with step-by-step visualization.">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://endeclab.xyz/cipher-lab">
+  
+  <%- include('partials/head') %>
+  
+  <!-- Cipher Lab Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Classical Ciphers Laboratory",
+    "description": "Interactive learning course on classical cryptography including Caesar, Affine, Rail Fence, Transposition, ROT13, and One-Time Pad ciphers",
+    "provider": {
+      "@type": "Organization",
+      "name": "EnDecLab",
+      "url": "https://endeclab.xyz/"
+    },
+    "courseMode": "online",
+    "educationalLevel": "beginner",
+    "inLanguage": "en",
+    "url": "https://endeclab.xyz/cipher-lab",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "category": "Educational Course"
+    },
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "online",
+      "inLanguage": "en",
+      "courseWorkload": "PT2H"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Caesar Cipher"
+      },
+      {
+        "@type": "Thing", 
+        "name": "Affine Cipher"
+      },
+      {
+        "@type": "Thing",
+        "name": "Rail Fence Cipher"
+      },
+      {
+        "@type": "Thing",
+        "name": "Transposition Cipher"
+      },
+      {
+        "@type": "Thing",
+        "name": "ROT13"
+      },
+      {
+        "@type": "Thing",
+        "name": "One-Time Pad"
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="cipher-lab">
+  <%- include('partials/header') %>
+  <section class="cipher-hero">
+    <div class="cipher-hero-content">
+      <div class="cipher-hero-left">
+        <h1 class="cipher-title-gradient">Classical Cipher Laboratory</h1>
+        <div class="cipher-tagline">Explore, visualize, and experiment with classic ciphers</div>
+        <div class="cipher-intro">Try Caesar, Affine, Rail Fence, Transposition, and ROT13 ciphers. See how each algorithm transforms your message step by step!</div>
+      </div>
+      <div class="cipher-hero-right">
+        <img src="/images/logo.webp" alt="EnDecLab Logo" class="cipher-logo-img" />
+      </div>
+    </div>
+  </section>
+  <section class="cipher-cards-row">
+    <div class="cipher-card-modern border1" data-cipher="caesar">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+      </div>
+      <h3>Caesar Cipher</h3>
+      <p>Classical substitution cipher with shift</p>
+    </div>
+    <div class="cipher-card-modern border2" data-cipher="affine">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-3 9a9 9 0 019 9"/>
+        </svg>
+      </div>
+      <h3>Affine Cipher</h3>
+      <p>Mathematical substitution cipher</p>
+    </div>
+    <div class="cipher-card-modern border3" data-cipher="railfence">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+          <polyline points="14,2 14,8 20,8"/>
+          <line x1="16" y1="13" x2="8" y2="13"/>
+          <line x1="16" y1="17" x2="8" y2="17"/>
+          <polyline points="10,9 9,9 8,9"/>
+        </svg>
+      </div>
+      <h3>Rail Fence</h3>
+      <p>Transposition cipher with rails</p>
+    </div>
+    <div class="cipher-card-modern border4" data-cipher="transposition">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 12l2 2 4-4"/>
+          <path d="M21 12c-1 0-2.4-.4-3.5-1.5S16 9 16 8s.4-2.5 1.5-3.5S20 3 21 3s2.4.4 3.5 1.5S26 7 26 8s-.4 2.5-1.5 3.5S22 12 21 12z"/>
+        </svg>
+      </div>
+      <h3>Columnar Transposition</h3>
+      <p>Matrix-based transposition cipher</p>
+    </div>
+    <div class="cipher-card-modern border4" data-cipher="onetimepad">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+      </div>
+      <h3>One-Time Pad</h3>
+      <p>Unbreakable encryption method</p>
+    </div>
+    <div class="cipher-card-modern border3" data-cipher="rot13">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-3 9a9 9 0 019 9"/>
+        </svg>
+      </div>
+      <h3>ROT13</h3>
+      <p>Simple rotation cipher</p>
+    </div>
+  </section>
+  <main class="cipher-main">
+    <section class="cipher-selector">
+      <h2 class="cipher-section-title">Classical Cipher Laboratory</h2>
+      <div class="cipher-tabs">
+        <button class="cipher-tab active" data-cipher="caesar">Caesar</button>
+        <button class="cipher-tab" data-cipher="railfence">Rail Fence</button>
+        <button class="cipher-tab" data-cipher="transposition">Transposition</button>
+        <button class="cipher-tab" data-cipher="affine">Affine</button>
+        <button class="cipher-tab" data-cipher="rot13">ROT13</button>
+        <button class="cipher-tab" data-cipher="onetimepad">One-Time Pad</button>
+      </div>
+    </section>
+    
+    <section class="cipher-workspace">
+      <div class="cipher-controls">
+        <div class="control-group">
+          <label for="cipher-input">Input Text</label>
+          <textarea id="cipher-input" class="cipher-textarea" placeholder="Enter text to encrypt/decrypt..."></textarea>
+        </div>
+        
+        <div class="cipher-params" id="caesar-params">
+          <div class="control-group">
+            <label for="caesar-shift">Shift Value</label>
+            <input type="range" id="caesar-shift" min="1" max="25" value="3">
+            <span id="caesar-shift-value">3</span>
+          </div>
+        </div>
+        
+        <div class="cipher-params" id="railfence-params" style="display: none;">
+          <div class="control-group">
+            <label for="railfence-rails">Number of Rails</label>
+            <input type="number" id="railfence-rails" min="2" max="10" value="3">
+          </div>
+        </div>
+        
+        <div class="cipher-params" id="affine-params" style="display: none;">
+          <div class="control-group">
+            <label for="affine-a">Multiplier (a)</label>
+            <input type="number" id="affine-a" min="1" max="25" value="5">
+            <small>Must be coprime with 26 (1,3,5,7,9,11,15,17,19,21,23,25)</small>
+          </div>
+          <div class="control-group">
+            <label for="affine-b">Shift (b)</label>
+            <input type="number" id="affine-b" min="0" max="25" value="8">
+          </div>
+        </div>
+        
+        <div class="cipher-params" id="transposition-params" style="display: none;">
+          <div class="control-group">
+            <label for="transposition-keys">Keys (comma-separated)</label>
+            <input type="text" id="transposition-keys" placeholder="Enter keys (e.g., 3,1,4,2,5)">
+            <small>Enter numbers separated by commas to specify column order</small>
+          </div>
+        </div>
+        
+        <div class="cipher-params" id="onetimepad-params" style="display: none;">
+          <div class="control-group">
+            <label for="otp-key">Key (Letters only)</label>
+            <input type="text" id="otp-key" placeholder="Enter random key (same length as text)">
+          </div>
+        </div>
+        
+        <div class="cipher-params" id="rot13-params" style="display: none;">
+          <div class="control-group">
+            <p>ROT13 uses a fixed shift of 13 letters</p>
+          </div>
+        </div>
+        
+        <div class="control-group mode-selector">
+          <button class="mode-button active" data-mode="encrypt">Encrypt</button>
+          <button class="mode-button" data-mode="decrypt">Decrypt</button>
+        </div>
+        
+        <button id="execute-cipher" class="action-button">Execute</button>
+      </div>
+      
+      <div class="cipher-output">
+        <div class="output-header">
+          <h3>Result</h3>
+          <div class="output-actions">
+            <button id="copy-output" class="small-button">Copy</button>
+            <button id="clear-all" class="small-button">Clear</button>
+          </div>
+        </div>
+        <div id="cipher-result" class="result-display"></div>
+      </div>
+    </section>
+    
+    <section class="cipher-visualization">
+      <h3 class="transformation-title">Transformation Process - <span id="current-cipher-name">Caesar Cipher</span></h3>
+      <div class="visualization-container">
+        <!-- Caesar Cipher -->
+        <div id="caesar-visualization" class="visualization-content">
+          <div class="step">
+            <h4>Step 1: Select Shift Value</h4>
+            <div class="shift-value-display">Shift: <span id="visual-shift-value">3</span></div>
+          </div>
+          <div class="step">
+            <h4>Step 2: Apply Shift to Each Letter</h4>
+            <div class="caesar-letter-grid" id="caesar-letter-grid"></div>
+          </div>
+          <div class="step">
+            <h4>Step 3: Final Transformation</h4>
+            <div class="final-result" id="caesar-final-result"></div>
+          </div>
+        </div>
+
+        <!-- Rail Fence Cipher -->
+        <div id="railfence-visualization" class="visualization-content" style="display: none;">
+          <div class="step">
+            <h4>Step 1: Create Rails</h4>
+            <div class="rail-count-display">Number of Rails: <span id="visual-rail-count">3</span></div>
+          </div>
+          <div class="step">
+            <h4>Step 2: Write in Zigzag Pattern</h4>
+            <div class="railfence-pattern" id="railfence-pattern"></div>
+          </div>
+          <div class="step">
+            <h4>Step 3: Read Row by Row</h4>
+            <div class="final-result" id="railfence-final-result"></div>
+          </div>
+        </div>
+
+        <!-- Transposition Cipher -->
+        <div id="transposition-visualization" class="visualization-content" style="display: none;">
+          <div class="step">
+            <h4>Step 1: Create Grid</h4>
+            <div class="grid-size-display">Columns: <span id="visual-column-count">5</span></div>
+          </div>
+          <div class="step">
+            <h4>Step 2: Fill Grid <span class="mode-indicator"></span></h4>
+            <div class="transposition-grid" id="transposition-grid"></div>
+          </div>
+          <div class="step">
+            <h4>Step 3: Read <span class="mode-indicator"></span></h4>
+            <div class="final-result" id="transposition-final-result"></div>
+          </div>
+        </div>
+
+        <!-- Affine Cipher -->
+        <div id="affine-visualization" class="visualization-content" style="display: none;">
+          <div class="step">
+            <h4>Step 1: Set Parameters</h4>
+            <div class="affine-params-display">
+              <div id="affine-encrypt-formula">Formula: E(x) = (<span id="visual-a-value">5</span>x + <span id="visual-b-value">8</span>) mod 26</div>
+              <div id="affine-decrypt-formula" style="display: none;">Formula: D(y) = a⁻¹(y - b) mod 26, where a⁻¹ is the modular inverse of a</div>
+            </div>
+          </div>
+          <div class="step">
+            <h4>Step 2: Transform Each Letter</h4>
+            <div class="affine-transformation" id="affine-transformation"></div>
+          </div>
+          <div class="step">
+            <h4>Step 3: Final Result</h4>
+            <div class="final-result" id="affine-final-result"></div>
+          </div>
+        </div>
+
+        <!-- One-Time Pad -->
+        <div id="onetimepad-visualization" class="visualization-content" style="display: none;">
+          <div class="step">
+            <h4>Step 1: Generate/Enter Key</h4>
+            <div class="otp-key-display">Key: <span id="visual-otp-key"></span></div>
+          </div>
+          <div class="step">
+            <h4>Step 2: Apply XOR Operation</h4>
+            <div class="otp-operation" id="otp-operation"></div>
+          </div>
+          <div class="step">
+            <h4>Step 3: Final Ciphertext</h4>
+            <div class="final-result" id="otp-final-result"></div>
+          </div>
+        </div>
+
+        <!-- ROT13 -->
+        <div id="rot13-visualization" class="visualization-content" style="display: none;">
+          <div class="step">
+            <h4>Step 1: Fixed Rotation</h4>
+            <div class="rot13-rotation-display">Rotation: 13 letters</div>
+          </div>
+          <div class="step">
+            <h4>Step 2: Apply to Each Letter</h4>
+            <div class="rot13-transformation" id="rot13-transformation"></div>
+          </div>
+          <div class="step">
+            <h4>Step 3: Final Result</h4>
+            <div class="final-result" id="rot13-final-result"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="cipher-info">
+      <h3 class="info-section-title">About <span id="current-cipher-name">Classical Ciphers</span></h3>
+      <div id="caesar-info" class="info-content">
+        <p>Classical ciphers are the foundation of cryptography, developed and used for centuries before the advent of computers. These ciphers include substitution and transposition techniques, where the letters of a message are systematically replaced or rearranged according to a set of rules or a key.</p>
+        <p>Examples include the Caesar cipher, Affine cipher, Rail Fence, Transposition, One-Time Pad, and ROT13. Each method demonstrates a unique approach to hiding information, from simple letter shifts to complex rearrangements and mathematically-based transformations.</p>
+        <p><strong>Security:</strong> While classical ciphers are easy to understand and great for learning cryptographic principles, they are not secure by modern standards. Most can be broken quickly using frequency analysis, brute force, or pattern recognition. However, they remain important for educational purposes and historical context.</p>
+      </div>
+      <div id="railfence-info" class="info-content" style="display: none;">
+        <p>The Rail Fence cipher is a form of transposition cipher that gets its name from the way in which it's encoded. It works by writing the message in a zigzag pattern along a number of rails (lines), then reading off the ciphertext by rows.</p>
+        <p><strong>Encryption Process:</strong> Write the message in a zigzag pattern along the specified number of rails, then read the ciphertext row by row.</p>
+        <p><strong>Decryption Process:</strong> Reconstruct the zigzag pattern by calculating the positions of characters in each rail, then read the message by following the zigzag path.</p>
+        <p><strong>Security:</strong> The rail fence cipher is not very strong and can be broken easily by trying different numbers of rails or through frequency analysis.</p>
+      </div>
+      <div id="transposition-info" class="info-content" style="display: none;">
+        <p>The Transposition cipher rearranges the letters of the plaintext according to a specific system defined by a key. The key can be a word or a sequence of numbers that determines the order in which columns are read.</p>
+        <p><strong>Encryption Process:</strong> Write the message in rows of a fixed length (determined by the key length), then reorder the columns according to the key before reading the ciphertext column by column.</p>
+        <p><strong>Decryption Process:</strong> Determine the original column ordering from the key, then reconstruct the grid by filling columns in the correct order before reading the plaintext row by row.</p>
+        <p><strong>Security:</strong> While more secure than simple substitution ciphers, transposition ciphers can be broken through anagramming and pattern recognition.</p>
+      </div>
+      <div id="onetimepad-info" class="info-content" style="display: none;">
+        <p>The One-Time Pad is an encryption technique that cannot be cracked if used correctly. It requires a pre-shared key that is at least as long as the message and is never reused.</p>
+        <p><strong>Encryption Process:</strong> Combine each character of the plaintext with the corresponding character of the key using modular addition: <code>C = (P + K) mod 26</code>.</p>
+        <p><strong>Decryption Process:</strong> Recover the plaintext by modular subtraction: <code>P = (C - K + 26) mod 26</code>.</p>
+        <p><strong>Security:</strong> When implemented correctly with truly random keys that are never reused, the one-time pad provides perfect secrecy. However, key distribution makes it impractical for most uses.</p>
+      </div>
+      <div id="rot13-info" class="info-content" style="display: none;">
+        <p>ROT13 ("rotate by 13 places") is a special case of the Caesar cipher which was developed in ancient Rome. It replaces a letter with the 13th letter after it in the alphabet.</p>
+        <p><strong>Process:</strong> ROT13 is its own inverse - the same algorithm is used for both encryption and decryption. Applying ROT13 twice returns the original text.</p>
+        <p><strong>Usage:</strong> ROT13 is often used to hide spoilers, punchlines, or offensive content in online forums. It provides no cryptographic security as it can be trivially reversed.</p>
+      </div>
+      <div id="affine-info" class="info-content" style="display: none;">
+        <p>The Affine cipher is a type of monoalphabetic substitution cipher, where each letter in the alphabet is mapped to its numeric equivalent, encrypted using a mathematical function, and converted back to a letter.</p>
+        <p><strong>Encryption Formula:</strong> E(x) = (ax + b) mod 26</p>
+        <p><strong>Decryption Formula:</strong> D(y) = a⁻¹(y - b) mod 26, where a⁻¹ is the modular multiplicative inverse of a modulo 26</p>
+        <p><strong>Requirements:</strong> The key 'a' must be coprime with 26 (i.e., gcd(a, 26) = 1). Valid values for 'a' are: 1, 3, 5, 7, 9, 11, 15, 17, 19, 21, 23, 25.</p>
+        <p><strong>Security:</strong> The affine cipher can be broken using frequency analysis or brute force (only 312 possible key combinations).</p>
+      </div>
+    </section>
+  </main>
+  <%- include('partials/footer') %>
+  <script src="/js/ciphers.js"></script>
+  <script>
+    // Cipher card navigation
+    document.addEventListener('DOMContentLoaded', function() {
+      const cipherCards = document.querySelectorAll('.cipher-card-modern[data-cipher]');
+      cipherCards.forEach(card => {
+        card.addEventListener('click', function() {
+          const cipherType = this.getAttribute('data-cipher');
+          const cipherTab = document.querySelector(`[data-cipher="${cipherType}"]`);
+          if (cipherTab) {
+            cipherTab.click();
+          }
+        });
+        card.style.cursor = 'pointer';
+      });
+    });
+
+    // Scroll-triggered card animation for cipher cards
+    document.addEventListener('DOMContentLoaded', function() {
+      const cards = document.querySelectorAll('.cipher-card-modern');
+      const observer = new window.IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+      cards.forEach(card => observer.observe(card));
+    });
+    // Scroll-triggered animation for transformation steps
+    document.addEventListener('DOMContentLoaded', function() {
+      const steps = document.querySelectorAll('.visualization-container .step');
+      const observer = new window.IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      steps.forEach(step => observer.observe(step));
+    });
+    // Scroll-triggered animation for cipher info cards
+    document.addEventListener('DOMContentLoaded', function() {
+      const infos = document.querySelectorAll('.info-content');
+      const observer = new window.IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      infos.forEach(info => observer.observe(info));
+    });
+  </script>
+</body>
+</html>

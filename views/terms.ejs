@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service | EnDecLab Cryptography Learning Platform</title>
+  
+  <!-- Page-specific SEO -->
+  <meta name="description" content="Terms of Service for EnDecLab - Learn about usage guidelines, intellectual property rights, privacy policies & disclaimers for our cryptography learning platform.">
+  <meta name="keywords" content="terms of service, EnDecLab terms, usage guidelines, intellectual property, privacy policy, disclaimers, cryptography platform terms, educational terms">
+  
+  <!-- Open Graph for Terms -->
+  <meta property="og:title" content="Terms of Service | EnDecLab Legal Terms">
+  <meta property="og:description" content="Terms of Service for EnDecLab - Legal terms and conditions for using our cryptography learning platform and interactive labs.">
+  <meta property="og:url" content="https://endeclab.xyz/terms">
+  
+  <!-- Twitter Card for Terms -->
+  <meta property="twitter:title" content="Terms of Service | EnDecLab Legal Terms">
+  <meta property="twitter:description" content="Terms of Service for EnDecLab - Legal terms and conditions for using our cryptography learning platform and interactive labs.">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://endeclab.xyz/terms">
+  
+  <%- include('partials/head') %>
+  
+  <!-- Terms Page Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Terms of Service",
+    "description": "Terms of service page for EnDecLab cryptography learning platform",
+    "url": "https://endeclab.xyz/terms",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "EnDecLab",
+      "url": "https://endeclab.xyz/"
+    }
+  }
+  </script>
+</head>
+<body class="terms">
+  <%- include('partials/header') %>
+  <section class="terms-hero">
+    <div class="terms-hero-content">
+      <div class="terms-hero-left">
+        <h1 class="terms-title-gradient">Terms & Conditions</h1>
+        <div class="terms-tagline">Guidelines for using EnDecLab responsibly</div>
+        <div class="terms-intro">These Terms & Conditions explain your rights and responsibilities when using EnDecLab. Please read them carefully before using any lab or feature.</div>
+      </div>
+      <div class="terms-hero-right">
+        <svg class="terms-hero-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="32" cy="32" r="30" stroke="#00d8ff" stroke-width="4" fill="rgba(0,216,255,0.08)"/>
+          <path d="M32 20a8 8 0 0 1 8 8c0 4.5-3.5 6.5-6.5 8.5-2.5 1.7-3.5 3-3.5 5.5" stroke="#00d8ff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="32" cy="46" r="2.5" fill="#00d8ff"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+  <main>
+    <section class="terms-section border1">
+      <h2><i class="fas fa-user-graduate"></i> Use of the Platform</h2>
+      <ul>
+        <li>EnDecLab is an educational tool designed for students, educators, and anyone interested in cryptography to learn and experiment with ciphers, digital signatures, steganography, and file encryption.</li>
+        <li>You may use the platform for personal, non-commercial, and academic purposes only. Commercial use is not permitted.</li>
+        <li>You agree not to misuse the platform for any unlawful, harmful, or malicious activities, including but not limited to attempting unauthorized access, distributing malware, or violating the rights of others.</li>
+        <li>Do not use EnDecLab for real-world confidential, sensitive, or production data. The platform is for learning and experimentation only.</li>
+      </ul>
+    </section>
+    <section class="terms-section border2">
+      <h2><i class="fas fa-copyright"></i> Intellectual Property</h2>
+      <ul>
+        <li>All content, including text, graphics, logos, icons, images, code, and software, is the property of EnDecLab and its contributors, unless otherwise stated.</li>
+        <li>You may not copy, reproduce, distribute, or create derivative works from any part of the platform without explicit written permission, except for personal academic use.</li>
+        <li>Open-source libraries used in the labs are credited where applicable.</li>
+      </ul>
+    </section>
+    <section class="terms-section border3">
+      <h2><i class="fas fa-upload"></i> User Content</h2>
+      <ul>
+        <li>You are responsible for any data, files, or content you upload, encrypt, or process using EnDecLab's labs and features.</li>
+        <li>Do not upload or process sensitive personal information, confidential data, or any content that you do not have the right to use.</li>
+        <li>EnDecLab is not responsible for the loss, corruption, or unauthorized access of user data. Always keep backups of your files.</li>
+      </ul>
+    </section>
+    <section class="terms-section border4">
+      <h2><i class="fas fa-shield-alt"></i> Privacy and Data Security</h2>
+      <ul>
+        <li>EnDecLab does not store your encrypted files, plaintext, or cryptographic keys after your session ends. All processing is done in-session for your privacy.</li>
+        <li>We may collect non-personal usage statistics to improve the platform, but we do not sell or share your data with third parties.</li>
+        <li>Despite our efforts, no web application is completely secure. Use EnDecLab at your own risk and avoid using it for real-world confidential or sensitive data.</li>
+        <li>For more details, see our <a href="/privacy">Privacy Policy</a>.</li>
+      </ul>
+    </section>
+    <section class="terms-section border5">
+      <h2><i class="fas fa-exclamation-triangle"></i> Disclaimers</h2>
+      <ul>
+        <li>EnDecLab is provided for educational purposes only. The cryptographic tools and algorithms are simplified for learning and may not be secure for real-world use.</li>
+        <li>We do not guarantee the accuracy, reliability, or availability of the platform at all times.</li>
+        <li>EnDecLab and its contributors are not liable for any damages, losses, or consequences resulting from the use or inability to use the platform.</li>
+      </ul>
+    </section>
+    <section class="terms-section border1">
+      <h2><i class="fas fa-sync-alt"></i> Changes to Terms</h2>
+      <ul>
+        <li>We may update these Terms & Conditions from time to time. Continued use of the platform after changes constitutes acceptance of the new Terms.</li>
+        <li>Last updated: <%= new Date().toLocaleDateString() %></li>
+      </ul>
+    </section>
+    <section class="terms-section border2">
+      <h2><i class="fas fa-envelope"></i> Contact</h2>
+      <ul>
+        <li>For questions or concerns about these Terms, please contact the project team via the <a href="/contact">Contact</a> page.</li>
+      </ul>
+    </section>
+  </main>
+  <%- include('partials/footer') %>
+</body>
+</html>

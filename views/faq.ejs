@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ | Frequently Asked Questions | EnDecLab Cryptography Learning Platform</title>
+  
+  <!-- Page-specific SEO -->
+  <meta name="description" content="FAQ - Frequently Asked Questions about EnDecLab cryptography learning platform. Find answers about classical ciphers, digital signatures, steganography & file encryption. Get help here!">
+  <meta name="keywords" content="FAQ, frequently asked questions, EnDecLab FAQ, cryptography questions, encryption FAQ, digital signatures FAQ, steganography FAQ, file encryption FAQ, platform help">
+  
+  <!-- Open Graph for FAQ -->
+  <meta property="og:title" content="FAQ | Frequently Asked Questions | EnDecLab">
+  <meta property="og:description" content="Frequently Asked Questions about EnDecLab - Find answers to common questions about cryptography learning, classical ciphers, digital signatures, steganography, and file encryption.">
+  <meta property="og:url" content="https://endeclab.xyz/faq">
+  
+  <!-- Twitter Card for FAQ -->
+  <meta property="twitter:title" content="FAQ | Frequently Asked Questions">
+  <meta property="twitter:description" content="Frequently Asked Questions about EnDecLab - Find answers to common questions about cryptography learning, classical ciphers, digital signatures, steganography, and file encryption.">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://endeclab.xyz/faq">
+  
+  <%- include('partials/head') %>
+  
+  <!-- FAQ Page Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "name": "Frequently Asked Questions",
+    "description": "FAQ page for EnDecLab cryptography learning platform",
+    "url": "https://endeclab.xyz/faq",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is EnDecLab?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "EnDecLab is an interactive cryptography learning platform that provides hands-on labs for classical ciphers, digital signatures, steganography, and file encryption."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is EnDecLab free to use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, EnDecLab is completely free to use for educational purposes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What cryptography topics does EnDecLab cover?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "EnDecLab covers classical ciphers (Caesar, Affine, Rail Fence, Transposition, ROT13, One-Time Pad), digital signatures, steganography, and file encryption."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="faq">
+  <%- include('partials/header') %>
+  <section class="faq-hero">
+    <div class="faq-hero-content">
+      <div class="faq-hero-left">
+        <h1 class="faq-title-gradient">Frequently Asked Questions</h1>
+        <div class="faq-tagline">Your guide to using EnDecLab with confidence</div>
+        <div class="faq-intro">Find answers to common questions about labs, privacy, troubleshooting, and more. Click any question to expand for a detailed answer.</div>
+      </div>
+      <div class="faq-hero-right">
+        <svg class="faq-hero-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="32" cy="32" r="30" stroke="#00d8ff" stroke-width="4" fill="rgba(0,216,255,0.08)"/>
+          <path d="M32 20a8 8 0 0 1 8 8c0 4.5-3.5 6.5-6.5 8.5-2.5 1.7-3.5 3-3.5 5.5" stroke="#00d8ff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="32" cy="46" r="2.5" fill="#00d8ff"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+  <main>
+    <section class="faq-section border1">
+      <h2><i class="fas fa-info-circle"></i> General</h2>
+      <div class="faq-q"><strong>What is EnDecLab?</strong></div>
+      <div class="faq-a">EnDecLab is an interactive educational platform for learning and experimenting with cryptography concepts, including ciphers, digital signatures, steganography, and file encryption. It is designed for hands-on exploration and real understanding.</div>
+      <div class="faq-q"><strong>Who can use EnDecLab?</strong></div>
+      <div class="faq-a">Anyone interested in cryptography—students, teachers, hobbyists, and lifelong learners. No prior experience is required.</div>
+      <div class="faq-q"><strong>Is EnDecLab free to use?</strong></div>
+      <div class="faq-a">Yes, EnDecLab is completely free for educational and non-commercial use. You can access all labs and resources without payment or registration.</div>
+      <div class="faq-q"><strong>What makes EnDecLab different?</strong></div>
+      <div class="faq-a">EnDecLab focuses on interactivity, clear explanations, and real cryptographic tools. You can see how algorithms work step-by-step, not just read about them.</div>
+    </section>
+    <section class="faq-section border2">
+      <h2><i class="fas fa-user-shield"></i> Privacy & Security</h2>
+      <div class="faq-q"><strong>Does EnDecLab store my files or data?</strong></div>
+      <div class="faq-a">No, your files and cryptographic keys are never stored on the server. All processing is done in your browser, and data is cleared after your session ends.</div>
+      <div class="faq-q"><strong>Is it safe to use real confidential data?</strong></div>
+      <div class="faq-a">No, EnDecLab is for educational use only. Do not use it for real-world confidential or sensitive data. Always use test data for learning.</div>
+      <div class="faq-q"><strong>Do I need to create an account?</strong></div>
+      <div class="faq-a">No account or personal information is required. You can use all features anonymously.</div>
+      <div class="faq-q"><strong>How is my privacy protected?</strong></div>
+      <div class="faq-a">All cryptographic operations are performed client-side. No personal data, files, or keys are sent to the server or stored.</div>
+    </section>
+    <section class="faq-section border3">
+      <h2><i class="fas fa-flask"></i> Labs & Features</h2>
+      <div class="faq-q"><strong>What labs are available?</strong></div>
+      <div class="faq-a">EnDecLab offers Classical Ciphers Lab, Steganography Lab, File Encryption Lab, and Digital Signatures Lab. Each lab is interactive and includes step-by-step explanations.</div>
+      <div class="faq-q"><strong>Can I use my own files for encryption?</strong></div>
+      <div class="faq-a">Yes, in the File Encryption Lab you can upload your own files for encryption and decryption practice. All processing is local to your device.</div>
+      <div class="faq-q"><strong>Are the cryptography algorithms secure?</strong></div>
+      <div class="faq-a">The algorithms are simplified for learning and demonstration. For real-world security, always use professional tools and libraries.</div>
+      <div class="faq-q"><strong>How do I use the step-by-step explanation feature?</strong></div>
+      <div class="faq-a">In each lab, look for the "Step-by-Step" or "Show Steps" button. This will break down the algorithm's process so you can follow each stage of encryption or decryption.</div>
+      <div class="faq-q"><strong>Can I see how my input changes the output?</strong></div>
+      <div class="faq-a">Yes! The labs update results live as you type or change settings, so you can experiment and instantly see the effects.</div>
+    </section>
+    <section class="faq-section border4">
+      <h2><i class="fas fa-tools"></i> Troubleshooting</h2>
+      <div class="faq-q"><strong>The site isn't working properly. What should I do?</strong></div>
+      <div class="faq-a">Try refreshing the page or clearing your browser cache. If the problem persists, check your internet connection or try a different browser. For ongoing issues, contact the project team via the <a href="/contact">Contact</a> page.</div>
+      <div class="faq-q"><strong>How do I report a bug or suggest a feature?</strong></div>
+      <div class="faq-a">You can send your feedback or bug report through the <a href="/contact">Contact</a> page. We welcome suggestions and aim to improve the platform for everyone.</div>
+      <div class="faq-q"><strong>Why can't I decrypt my file or message?</strong></div>
+      <div class="faq-a">Check that you are using the correct password or key, and that the file or message hasn't been altered. If you lose your password, there is no way to recover encrypted data.</div>
+      <div class="faq-q"><strong>Where can I get more help?</strong></div>
+      <div class="faq-a">Visit the <a href="/documentation">Documentation</a> page for detailed guides, or use the <a href="/contact">Contact</a> page to reach out directly.</div>
+    </section>
+    <p style="margin-top:2rem; color:var(--dark-text); font-size:0.95rem; text-align:center;">Last updated: <%= new Date().toLocaleDateString() %></p>
+  </main>
+  <%- include('partials/footer') %>
+</body>
+</html>

@@ -1,0 +1,40 @@
+module.exports = {
+  content: [
+    './views/**/*.ejs',
+    './views/partials/**/*.ejs',
+    './public/js/**/*.js'
+  ],
+  css: ['./public/css/style.clean.css'],
+  output: './public/css/style.clean.css',
+  safelist: [
+    'active',
+    'hover',
+    'focus',
+    'disabled',
+    'in-view',
+    'border1',
+    'border2', 
+    'border3',
+    'border4',
+    'border5',
+    'border6',
+    'border7',
+    'card-blue',
+    'card-pink',
+    'card-green',
+    'card-yellow',
+    'card-purple',
+    'card-orange',
+    'chip-blue',
+    'chip-pink',
+    'chip-green',
+    'chip-yellow',
+    'chip-purple',
+    'drag-over',
+    'valid',
+    'invalid',
+    'success',
+    'warning',
+    'error'
+  ]
+} 

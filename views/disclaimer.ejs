@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disclaimer | EnDecLab Cryptography Learning Platform</title>
+  
+  <!-- Page-specific SEO -->
+  <meta name="description" content="Disclaimer for EnDecLab - Important information about the educational nature of our cryptography learning platform. Learn about limitations, risks & intended use of our tools.">
+  <meta name="keywords" content="disclaimer, EnDecLab disclaimer, educational disclaimer, cryptography disclaimer, learning platform disclaimer, security disclaimer, educational use only">
+  
+  <!-- Open Graph for Disclaimer -->
+  <meta property="og:title" content="Disclaimer | EnDecLab Legal Notice">
+  <meta property="og:description" content="Disclaimer for EnDecLab - Important legal notices and disclaimers regarding the use of our cryptography learning platform and educational content.">
+  <meta property="og:url" content="https://endeclab.xyz/disclaimer">
+  
+  <!-- Twitter Card for Disclaimer -->
+  <meta property="twitter:title" content="Disclaimer | EnDecLab Legal Notice">
+  <meta property="twitter:description" content="Disclaimer for EnDecLab - Important legal notices and disclaimers regarding the use of our cryptography learning platform and educational content.">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://endeclab.xyz/disclaimer">
+  
+  <%- include('partials/head') %>
+  
+  <!-- Disclaimer Page Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Disclaimer",
+    "description": "Disclaimer page for EnDecLab cryptography learning platform",
+    "url": "https://endeclab.xyz/disclaimer",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "EnDecLab",
+      "url": "https://endeclab.xyz/"
+    }
+  }
+  </script>
+</head>
+<body class="disclaimer">
+  <%- include('partials/header') %>
+  <section class="disclaimer-hero">
+    <div class="disclaimer-hero-content">
+      <div class="disclaimer-hero-left">
+        <h1 class="disclaimer-title-gradient">Disclaimer</h1>
+        <div class="disclaimer-tagline">Important information about using EnDecLab</div>
+        <div class="disclaimer-intro">This disclaimer explains the limitations, risks, and responsibilities associated with using EnDecLab and its labs. Please read carefully before using any feature.</div>
+      </div>
+      <div class="disclaimer-hero-right">
+        <svg class="disclaimer-hero-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="32" cy="32" r="30" stroke="#00d8ff" stroke-width="4" fill="rgba(0,216,255,0.08)"/>
+          <path d="M32 20a8 8 0 0 1 8 8c0 4.5-3.5 6.5-6.5 8.5-2.5 1.7-3.5 3-3.5 5.5" stroke="#00d8ff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="32" cy="46" r="2.5" fill="#00d8ff"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+  <main>
+    <section class="disclaimer-section border1">
+      <h2><i class="fas fa-graduation-cap"></i> Educational Purpose Only</h2>
+      <ul>
+        <li>EnDecLab is intended solely for educational and academic purposes, specifically for learning and experimenting with cryptography concepts in labs such as Classical Ciphers, Steganography, File Encryption, and Digital Signatures.</li>
+        <li>The cryptographic tools, algorithms, and resources provided are simplified for instructional use and may not reflect real-world security standards.</li>
+        <li>Do not use EnDecLab for real-world confidential, sensitive, or production data.</li>
+      </ul>
+    </section>
+    <section class="disclaimer-section border2">
+      <h2><i class="fas fa-user-shield"></i> No Professional Advice</h2>
+      <ul>
+        <li>Nothing on this platform constitutes professional, legal, or security advice. For any real-world cryptographic or security needs, consult a qualified professional.</li>
+        <li>All explanations, guides, and resources are for learning and demonstration only.</li>
+      </ul>
+    </section>
+    <section class="disclaimer-section border3">
+      <h2><i class="fas fa-exclamation-triangle"></i> No Liability</h2>
+      <ul>
+        <li>EnDecLab and its contributors make no warranties regarding the accuracy, completeness, or reliability of the information and tools provided.</li>
+        <li>We are not liable for any loss, damage, or consequences arising from the use or misuse of the platform, including but not limited to data loss, security breaches, or academic outcomes.</li>
+        <li>Use the platform at your own risk.</li>
+      </ul>
+    </section>
+    <section class="disclaimer-section border4">
+      <h2><i class="fas fa-external-link-alt"></i> External Links</h2>
+      <ul>
+        <li>EnDecLab may contain links to external websites or resources. We do not endorse or take responsibility for the content, privacy practices, or accuracy of any third-party sites.</li>
+        <li>Always review the privacy and terms of any external site you visit from EnDecLab.</li>
+      </ul>
+    </section>
+    <section class="disclaimer-section border5">
+      <h2><i class="fas fa-tools"></i> Platform Limitations</h2>
+      <ul>
+        <li>We strive to keep the platform available and secure, but do not guarantee uninterrupted access or freedom from errors or vulnerabilities.</li>
+        <li>All cryptographic operations are performed in your browser; files and keys are never uploaded to the server.</li>
+        <li>For more details, see our <a href="/privacy">Privacy Policy</a> and <a href="/terms">Terms & Conditions</a>.</li>
+      </ul>
+    </section>
+    <p style="margin-top:2rem; color:var(--dark-text); font-size:0.95rem; text-align:center;">Last updated: <%= new Date().toLocaleDateString() %></p>
+  </main>
+  <%- include('partials/footer') %>
+</body>
+</html> 

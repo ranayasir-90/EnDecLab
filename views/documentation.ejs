@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation | Cryptography Learning Guides | EnDecLab</title>
+  
+  <!-- Page-specific SEO -->
+  <meta name="description" content="Comprehensive Documentation for EnDecLab - Detailed guides, tutorials & technical documentation for classical ciphers, digital signatures, steganography & file encryption. Free learning resources.">
+  <meta name="keywords" content="cryptography documentation, encryption guides, digital signatures documentation, steganography tutorials, file encryption guides, cryptography tutorials, security documentation, educational guides">
+  
+  <!-- Open Graph for Documentation -->
+  <meta property="og:title" content="Cryptography Documentation | API Reference & Guides | EnDecLab">
+  <meta property="og:description" content="Comprehensive cryptography documentation - API reference, guides, tutorials, and technical documentation for classical ciphers, digital signatures, steganography, and file encryption.">
+  <meta property="og:url" content="https://endeclab.xyz/documentation">
+  
+  <!-- Twitter Card for Documentation -->
+  <meta property="twitter:title" content="Cryptography Documentation | API Reference & Guides">
+  <meta property="twitter:description" content="Comprehensive cryptography documentation - API reference, guides, tutorials, and technical documentation for classical ciphers, digital signatures, steganography, and file encryption.">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://endeclab.xyz/documentation">
+  
+  <%- include('partials/head') %>
+  
+  <!-- Documentation Page Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Cryptography Documentation",
+    "description": "Comprehensive documentation for cryptography learning platform including API reference, guides, and technical documentation",
+    "url": "https://endeclab.xyz/documentation"
+  }
+  </script>
+</head>
+<body class="documentation">
+  <%- include('partials/header') %>
+  <section class="doc-hero">
+    <div class="doc-hero-content">
+      <div class="doc-hero-left">
+        <h1 class="doc-title-gradient">EnDecLab Documentation</h1>
+        <div class="doc-tagline">Comprehensive Guide to All Labs & Features</div>
+        <div class="doc-intro">This page provides detailed documentation for every feature in EnDecLab. Learn how to use each lab, understand the technology behind it, and get tips for best results.</div>
+      </div>
+      <div class="doc-hero-right">
+        <svg class="doc-hero-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="32" cy="32" r="30" stroke="#00d8ff" stroke-width="4" fill="rgba(0,216,255,0.08)"/>
+          <path d="M20 34L29 43L44 25" stroke="#00d8ff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+  <main>
+    <section class="doc-section border1">
+      <h2><span class="doc-icon"><i class="fas fa-key"></i></span> Classical Ciphers Lab</h2>
+      <p>The Classical Ciphers Lab lets you experiment with historical encryption techniques. Each cipher demonstrates a different approach to hiding information. Below you'll find detailed documentation for each cipher:</p>
+      <h3>Caesar Cipher</h3>
+      <ul>
+        <li><strong>Background:</strong> The Caesar cipher is a simple substitution cipher where each letter in the plaintext is shifted by a fixed number of positions down the alphabet. Named after Julius Caesar, who used it in his private correspondence.</li>
+        <li><strong>How it works:</strong> For a shift of 3, A becomes D, B becomes E, etc. The alphabet wraps around (Z becomes C).</li>
+        <li><strong>How to use in lab:</strong> Select Caesar, enter your message and shift value, and click Encrypt or Decrypt. The result appears instantly.</li>
+        <li><strong>Example:</strong> <code>HELLO</code> with shift 3 → <code>KHOOR</code></li>
+        <li><strong>Tips:</strong> Only works well for English letters. Not secure for real use.</li>
+      </ul>
+      <h3>Affine Cipher</h3>
+      <ul>
+        <li><strong>Background:</strong> The Affine cipher is a type of monoalphabetic substitution cipher that uses mathematical functions to encrypt each letter. It uses the formula: <code>E(x) = (ax + b) mod 26</code>.</li>
+        <li><strong>How it works:</strong> Each letter is mapped to a number (A=0, B=1, ...), then transformed using the formula. The key is a pair of numbers (a, b), where a must be coprime with 26.</li>
+        <li><strong>How to use in lab:</strong> Select Affine, enter your message, a, and b values, and click Encrypt or Decrypt.</li>
+        <li><strong>Example:</strong> <code>HELLO</code> with a=5, b=8 → <code>RCLLA</code></li>
+        <li><strong>Tips:</strong> If decryption fails, check that 'a' is coprime with 26.</li>
+      </ul>
+      <h3>Rail Fence Cipher</h3>
+      <ul>
+        <li><strong>Background:</strong> The Rail Fence cipher is a transposition cipher that writes the message in a zigzag pattern across multiple "rails" and then reads off each row.</li>
+        <li><strong>How it works:</strong> For 3 rails, the message is written in a zigzag and then read row by row.</li>
+        <li><strong>How to use in lab:</strong> Select Rail Fence, enter your message and number of rails, and click Encrypt or Decrypt.</li>
+        <li><strong>Example:</strong> <code>WEAREDISCOVERED</code> with 3 rails → <code>WECRLTEERDSOEEVD</code></li>
+        <li><strong>Tips:</strong> Works best for longer messages.</li>
+      </ul>
+      <h3>Transposition Cipher</h3>
+      <ul>
+        <li><strong>Background:</strong> The Transposition cipher rearranges the letters of the plaintext according to a defined system, without changing the actual letters.</li>
+        <li><strong>How it works:</strong> The message is written in a grid and columns are rearranged according to a key.</li>
+        <li><strong>How to use in lab:</strong> Select Transposition, enter your message and key, and click Encrypt or Decrypt.</li>
+        <li><strong>Example:</strong> <code>HELLO WORLD</code> with key 3,1,2 → <code>LEHLOWORLD</code></li>
+        <li><strong>Tips:</strong> Key must be a permutation of column numbers.</li>
+      </ul>
+      <h3>ROT13 Cipher</h3>
+      <ul>
+        <li><strong>Background:</strong> ROT13 is a special case of the Caesar cipher with a fixed shift of 13. It is its own inverse (applying it twice returns the original text).</li>
+        <li><strong>How it works:</strong> Each letter is replaced by the letter 13 positions after it in the alphabet.</li>
+        <li><strong>How to use in lab:</strong> Select ROT13, enter your message, and click Encrypt/Decrypt.</li>
+        <li><strong>Example:</strong> <code>HELLO</code> → <code>URYYB</code></li>
+        <li><strong>Tips:</strong> Useful for obscuring spoilers or simple text, not for security.</li>
+      </ul>
+      <h3>One-Time Pad</h3>
+      <ul>
+        <li><strong>Background:</strong> The One-Time Pad is a theoretically unbreakable cipher if the key is truly random, as long as the key is as long as the message and used only once.</li>
+        <li><strong>How it works:</strong> Each letter of the message is combined with a letter from the key using modular addition.</li>
+        <li><strong>How to use in lab:</strong> Select One-Time Pad, enter your message and a random key of the same length, and click Encrypt/Decrypt.</li>
+        <li><strong>Example:</strong> <code>HELLO</code> with key <code>KDWLP</code> → <code>RIXZW</code></li>
+        <li><strong>Tips:</strong> Key must be truly random and never reused for perfect secrecy.</li>
+      </ul>
+      <h4>General Tips for Classical Ciphers Lab</h4>
+      <ul>
+        <li>Use the step-by-step explanation feature to see how each cipher works internally.</li>
+        <li>Try encrypting and decrypting the same message to understand reversibility.</li>
+        <li>For educational use only—these ciphers are not secure for real-world data.</li>
+        <li>Check the UI for error messages if your input or key is invalid.</li>
+      </ul>
+    </section>
+    <section class="doc-section border2">
+      <h2><span class="doc-icon"><i class="fas fa-image"></i></span> Steganography Lab</h2>
+      <p>The Steganography Lab allows you to hide secret messages inside images using the Least Significant Bit (LSB) technique. This method subtly changes the pixel data so the message is invisible to the naked eye.</p>
+      <ul>
+        <li><strong>Supported Formats:</strong> PNG and JPG images. PNG is recommended for best results.</li>
+        <li><strong>How it works:</strong> The LSB of each pixel is replaced with bits from your message. The change is visually undetectable but can be extracted by the lab.</li>
+        <li><strong>How to use in lab:</strong> Upload an image, enter your secret message, and click Hide. Download the new image or use the Extract feature to reveal hidden messages.</li>
+        <li><strong>Example:</strong> Hide <code>HELLO</code> in a PNG image. The output image looks identical but contains the message.</li>
+        <li><strong>Tips:</strong> Use high-resolution images for larger messages. Avoid compressing the image after hiding data.</li>
+        <li><strong>Security Note:</strong> Steganography hides the existence of a message but does not encrypt it. For sensitive data, encrypt before hiding.</li>
+        <li><strong>Troubleshooting:</strong> If extraction fails, ensure the image was not altered or compressed after hiding the message.</li>
+      </ul>
+    </section>
+    <section class="doc-section border3">
+      <h2><span class="doc-icon"><i class="fas fa-file-shield"></i></span> File Encryption Lab</h2>
+      <p>The File Encryption Lab lets you encrypt and decrypt files using modern cryptographic algorithms (e.g., AES). All encryption is performed in your browser for privacy and security.</p>
+      <ul>
+        <li><strong>Supported Files:</strong> Any file type up to 10MB. Larger files may not be supported due to browser limitations.</li>
+        <li><strong>How it works:</strong> Files are encrypted using a password-derived key (KDF). The encrypted file can only be decrypted with the same password.</li>
+        <li><strong>How to use in lab:</strong> Upload a file, enter a strong password, and click Encrypt. Download the encrypted file. To decrypt, upload the encrypted file and enter the password.</li>
+        <li><strong>Example:</strong> Encrypt <code>document.pdf</code> with password <code>My$trongP@ss</code>. The output is a .enc file.</li>
+        <li><strong>Tips:</strong> Use a unique, strong password for each file. Remember your password—there is no recovery!</li>
+        <li><strong>Security Note:</strong> All encryption is client-side. Files are never uploaded to the server.</li>
+        <li><strong>Troubleshooting:</strong> If decryption fails, check your password and file type. Corrupted or altered files cannot be decrypted.</li>
+      </ul>
+      <h4>Advanced Details</h4>
+      <ul>
+        <li><strong>Algorithm:</strong> AES-GCM is used for encryption, providing confidentiality and integrity.</li>
+        <li><strong>Password Handling:</strong> Passwords are converted to keys using PBKDF2 or a similar KDF with salt and iterations for security.</li>
+        <li><strong>File Size Limit:</strong> 10MB per file (browser limit).</li>
+        <li><strong>Error Handling:</strong> The lab shows clear error messages for unsupported files, wrong passwords, or decryption errors.</li>
+      </ul>
+    </section>
+    <section class="doc-section border4">
+      <h2><span class="doc-icon"><i class="fas fa-signature"></i></span> Digital Signatures Lab</h2>
+      <p>The Digital Signatures Lab lets you experiment with cryptographic signatures, which provide authenticity and integrity for messages and files. The lab supports RSA and ECDSA algorithms, as well as various hash functions.</p>
+      <ul>
+        <li><strong>Key Generation:</strong> Generate a public/private key pair (RSA or ECDSA). Keys are generated in your browser and never leave your device.</li>
+        <li><strong>Signing:</strong> Enter a message, select an algorithm and hash function, and click Sign. The lab creates a digital signature using your private key.</li>
+        <li><strong>Verification:</strong> Paste a signature and public key to verify a message's authenticity.</li>
+        <li><strong>Example:</strong> Sign <code>Hello World</code> with RSA-2048 and SHA-256. The output is a base64 signature.</li>
+        <li><strong>Tips:</strong> Keep your private key safe. Never share it. Use the lab to see how changing the message or key changes the signature.</li>
+        <li><strong>Hash Functions:</strong> SHA-256, SHA-512, BLAKE2, and MD5 are available for experimentation.</li>
+        <li><strong>Security Note:</strong> All cryptographic operations are client-side. Keys and signatures are never sent to the server.</li>
+        <li><strong>Troubleshooting:</strong> If verification fails, check the message, signature, and public key for typos or mismatches.</li>
+      </ul>
+      <h4>Advanced Details</h4>
+      <ul>
+        <li><strong>RSA:</strong> Asymmetric algorithm using large prime numbers. Commonly used for digital signatures and encryption.</li>
+        <li><strong>ECDSA:</strong> Elliptic Curve Digital Signature Algorithm. More efficient than RSA for the same security level.</li>
+        <li><strong>Hashing:</strong> Hash functions create a unique fingerprint of your message. Changing one character changes the hash completely.</li>
+        <li><strong>Key Storage:</strong> Keys are stored in memory only. Refreshing the page erases them.</li>
+      </ul>
+    </section>
+    <section class="doc-section border5">
+      <h2><span class="doc-icon"><i class="fas fa-book"></i></span> Learning Resources</h2>
+      <p>Access curated guides, books, and interactive tools to deepen your understanding of cryptography, steganography, and digital security. Resources are organized by lab and topic.</p>
+      <ul>
+        <li><strong>How to Use:</strong> Browse resources by lab or topic. Click to view details or download materials.</li>
+        <li><strong>Features:</strong> Book recommendations, guides, and external links.</li>
+        <li><strong>Tips:</strong> Start with beginner guides if you're new, or explore advanced topics for deeper learning.</li>
+      </ul>
+    </section>
+    <section class="doc-section border6">
+      <h2><span class="doc-icon"><i class="fas fa-tachometer-alt"></i></span> Home</h2>
+      <p>The Home page is your starting point for exploring all labs and features. It provides quick access, highlights new updates, and summarizes your options.</p>
+      <ul>
+        <li><strong>How to Use:</strong> Click any lab card to jump directly to that lab. Use the navigation bar for quick access to all sections.</li>
+        <li><strong>Features:</strong> Modern hero, lab cards, testimonials, and stats.</li>
+        <li><strong>Tips:</strong> Check the home page for new features and announcements.</li>
+      </ul>
+    </section>
+    <section class="doc-section border7">
+      <h2><span class="doc-icon"><i class="fas fa-envelope"></i></span> Contact & Support</h2>
+      <p>Need help or want to give feedback? Use the Contact page to send messages, report issues, or connect via email/social media.</p>
+      <ul>
+        <li><strong>How to Use:</strong> Fill out the contact form or use the direct contact options (email, WhatsApp, Instagram).</li>
+        <li><strong>Features:</strong> Modern contact cards, error dialogs, and direct links.</li>
+        <li><strong>Tips:</strong> For urgent issues, use email for the fastest response.</li>
+      </ul>
+    </section>
+  </main>
+  <%- include('partials/footer') %>
+</body>
+</html>

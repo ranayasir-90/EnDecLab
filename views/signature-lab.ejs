@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Signatures Lab | Learn RSA, ECDSA & Hash Functions | EnDecLab</title>
+  
+  <!-- Page-specific SEO -->
+  <meta name="description" content="Interactive Digital Signatures Lab - Master RSA, ECDSA, hash functions & digital signature verification. Create & verify signatures with step-by-step visualization. Free learning.">
+  <meta name="keywords" content="digital signatures, RSA, ECDSA, hash functions, SHA, MD5, signature verification, cryptography lab, authentication, integrity, non-repudiation, public key cryptography, digital certificates">
+  
+  <!-- Open Graph for Signature Lab -->
+  <meta property="og:title" content="Digital Signature Lab | RSA, DSA, ECDSA Signatures | EnDecLab">
+  <meta property="og:description" content="Interactive Digital Signature Lab - Learn RSA, DSA, ECDSA signatures with key generation, signing, and verification.">
+  <meta property="og:url" content="https://endeclab.xyz/signature-lab">
+  
+  <!-- Twitter Card for Signature Lab -->
+  <meta property="twitter:title" content="Digital Signature Lab | RSA, DSA, ECDSA Signatures">
+  <meta property="twitter:description" content="Interactive Digital Signature Lab - Learn RSA, DSA, ECDSA signatures with key generation, signing, and verification.">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://endeclab.xyz/signature-lab">
+  
+  <%- include('partials/head') %>
+  
+  <!-- Signature Lab Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Digital Signature Laboratory",
+    "description": "Interactive learning course on digital signatures including RSA, DSA, ECDSA, key generation, signing, and verification",
+    "provider": {
+      "@type": "Organization",
+      "name": "EnDecLab",
+      "url": "https://endeclab.xyz/"
+    },
+    "courseMode": "online",
+    "educationalLevel": "intermediate",
+    "inLanguage": "en",
+    "url": "https://endeclab.xyz/signature-lab",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "category": "Educational Course"
+    },
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "online",
+      "inLanguage": "en",
+      "courseWorkload": "PT2H"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "RSA Digital Signatures"
+      },
+      {
+        "@type": "Thing",
+        "name": "DSA Digital Signatures"
+      },
+      {
+        "@type": "Thing",
+        "name": "ECDSA Digital Signatures"
+      },
+      {
+        "@type": "Thing",
+        "name": "Key Generation"
+      },
+      {
+        "@type": "Thing",
+        "name": "Message Signing"
+      },
+      {
+        "@type": "Thing",
+        "name": "Signature Verification"
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="signature-lab">
+  <%- include('partials/header') %>
+  <section class="signature-hero">
+    <div class="signature-hero-content">
+      <div class="signature-hero-left">
+        <div class="signature-hero-title">Digital Signature Laboratory</div>
+        <div class="signature-hero-subtitle">Authenticate, Integrity, Non-repudiation</div>
+        <div class="signature-intro-text">Explore how digital signatures provide authentication, integrity, and non-repudiation for digital messages.</div>
+      </div>
+      <div class="signature-hero-right">
+        <img src="/images/logo.webp" alt="EnDecLab Logo" class="signature-logo-img" />
+      </div>
+    </div>
+  </section>
+  <main class="signature-main">
+    <div class="signature-process-row">
+      <div class="signature-card card-blue">
+        <div class="step-number">1</div>
+        <h3>Key Generation</h3>
+        <div class="key-generation">
+          <button id="generate-keys" class="action-button">Generate Key Pair</button>
+          <div class="key-display">
+            <div class="key-box">
+              <label>Public Key</label>
+              <textarea id="public-key" class="key-textarea" readonly placeholder="Public key will appear here"></textarea>
+              <button id="copy-public" class="small-button">Copy</button>
+            </div>
+            <div class="key-box">
+              <label>Private Key</label>
+              <textarea id="private-key" class="key-textarea" readonly placeholder="Private key will appear here"></textarea>
+              <button id="copy-private" class="small-button">Copy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="signature-card card-pink">
+        <div class="step-number">2</div>
+        <h3>Message Signing</h3>
+        <div class="signing-section">
+          <div class="control-group">
+            <label for="message-to-sign">Message to Sign</label>
+            <textarea id="message-to-sign" class="message-textarea" placeholder="Enter message to sign"></textarea>
+          </div>
+          <button id="sign-message" class="action-button" disabled>Sign Message</button>
+          <div class="signature-display">
+            <label>Digital Signature</label>
+            <textarea id="signature-output" class="signature-textarea" readonly placeholder="Signature will appear here"></textarea>
+            <button id="copy-signature" class="small-button">Copy</button>
+          </div>
+        </div>
+      </div>
+      <div class="signature-card card-green">
+        <div class="step-number">3</div>
+        <h3>Signature Verification</h3>
+        <div class="verification-section">
+          <div class="control-group">
+            <label for="message-to-verify">Original Message</label>
+            <textarea id="message-to-verify" class="message-textarea" placeholder="Enter original message"></textarea>
+          </div>
+          <div class="control-group">
+            <label for="signature-to-verify">Signature to Verify</label>
+            <textarea id="signature-to-verify" class="signature-textarea" placeholder="Enter signature to verify"></textarea>
+          </div>
+          <button id="verify-signature" class="action-button">Verify Signature</button>
+          <div id="verification-result" class="verification-result">
+            <div class="result-icon" style="display:none;"></div>
+            <div class="result-text">Verification result will appear here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="signature-visualization">
+      <h3>Signature Process Visualization</h3>
+      <div class="visualization-container">
+        <div class="visualization-card">
+          <div class="visualization-title">Signing Process</div>
+          <div class="visualization-steps">
+            <div class="viz-step">
+              <div class="viz-step-number">1</div>
+              <div class="viz-step-content">
+                <div class="viz-step-label">Original Message</div>
+                <div class="viz-step-box" id="original-message-box"></div>
+              </div>
+            </div>
+            <div class="viz-step-arrow"><span>→</span></div>
+            <div class="viz-step">
+              <div class="viz-step-number">2</div>
+              <div class="viz-step-content">
+                <div class="viz-step-label">Hash Function</div>
+                <div class="viz-step-box" id="hash-box"></div>
+              </div>
+            </div>
+            <div class="viz-step-arrow"><span>→</span></div>
+            <div class="viz-step">
+              <div class="viz-step-number">3</div>
+              <div class="viz-step-content">
+                <div class="viz-step-label">Private Key Encryption</div>
+                <div class="viz-step-box" id="signature-box"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="visualization-card verification-viz">
+          <div class="visualization-title">Verification Process</div>
+          <div class="visualization-steps">
+            <div class="viz-step">
+              <div class="viz-step-number">1</div>
+              <div class="viz-step-content">
+                <div class="viz-step-label">Received Message</div>
+                <div class="viz-step-box" id="received-message-box"></div>
+              </div>
+            </div>
+            <div class="viz-step-arrow"><span>→</span></div>
+            <div class="viz-step">
+              <div class="viz-step-number">2</div>
+              <div class="viz-step-content">
+                <div class="viz-step-label">Hash Function</div>
+                <div class="viz-step-box" id="received-hash-box"></div>
+              </div>
+            </div>
+            <div class="viz-step-arrow"><span>→</span></div>
+            <div class="viz-step">
+              <div class="viz-step-number">3</div>
+              <div class="viz-step-content">
+                <div class="viz-step-label">Public Key Decryption</div>
+                <div class="viz-step-box" id="decrypted-hash-box"></div>
+              </div>
+            </div>
+            <div class="viz-step-arrow"><span>→</span></div>
+            <div class="viz-step">
+              <div class="viz-step-number">4</div>
+              <div class="viz-step-content">
+                <div class="viz-step-label">Comparison</div>
+                <div class="viz-step-box" id="comparison-result-box"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="signature-info">
+      <h3>About Digital Signatures</h3>
+      <div class="info-content">
+        <p>Digital signatures are the digital equivalent of handwritten signatures or stamped seals, but offering far more inherent security. They are used to authenticate the identity of the sender of a message and ensure that the original content of the message has not been altered.</p>
+        <h4>How Digital Signatures Work</h4>
+        <ol>
+          <li><strong>Key Generation:</strong> A public-private key pair is created using cryptographic algorithms.</li>
+          <li><strong>Signing:</strong> The sender creates a hash of the message and encrypts it with their private key.</li>
+          <li><strong>Verification:</strong> The recipient decrypts the signature with the sender's public key and compares it to a newly generated hash of the received message.</li>
+        </ol>
+        <h4>Properties of Digital Signatures</h4>
+        <ul>
+          <li><strong>Authentication:</strong> Verifies the identity of the signer</li>
+          <li><strong>Non-repudiation:</strong> The signer cannot deny having signed the message</li>
+          <li><strong>Integrity:</strong> Any change to the message after signing invalidates the signature</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <script src="/js/signatures.js"></script>
+  <script>
+    // Scroll-triggered card animation for signature-cards and info-content
+    document.addEventListener('DOMContentLoaded', function() {
+      const cards = document.querySelectorAll('.signature-card, .info-content');
+      const observer = new window.IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+      cards.forEach(card => observer.observe(card));
+
+      // Hide tick/cross icon in verification result until a result is shown
+      const verificationResult = document.getElementById('verification-result');
+      const resultIcon = verificationResult.querySelector('.result-icon');
+      const resultText = verificationResult.querySelector('.result-text');
+      // Observe changes to the result text
+      const observerText = new MutationObserver(() => {
+        if (resultText.textContent === 'Verification result will appear here') {
+          resultIcon.style.display = 'none';
+        } else {
+          resultIcon.style.display = 'flex';
+        }
+      });
+      observerText.observe(resultText, { childList: true });
+    });
+  </script>
+  <%- include('partials/footer') %>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!-- Favicon and app icons -->
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/images/android-chrome-512x512.png">
+<link rel="manifest" href="/images/site.webmanifest">
+
+<!-- Organization structured data for Google logo -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "EnDecLab",
+  "url": "https://endeclab.xyz",
+  "logo": "https://endeclab.xyz/images/logo.webp",
+  "description": "Interactive cryptography and cybersecurity learning platform with hands-on labs for cipher techniques, digital signatures, steganography, and file encryption.",
+  "sameAs": [
+    "https://endeclab.xyz"
+  ]
+}
+</script>
+
+<!-- Website structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "EnDecLab",
+  "url": "https://endeclab.xyz",
+  "description": "Interactive cryptography and cybersecurity learning platform",
+  "publisher": {
+    "@type": "Organization",
+    "name": "EnDecLab",
+    "logo": "https://endeclab.xyz/images/logo.webp"
+  }
+}
+</script>
+
+<!-- Preload critical resources -->
+<link rel="preload" href="/images/logo.webp" as="image" type="image/webp">
+<link rel="preload" href="/css/style.clean.css" as="style">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@300;500&display=swap" as="style">
+
+<div class="binary-background"></div>
+<header class="main-header">
+  <a href="/" class="logo" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none;">
+    <img src="/images/logo.webp" alt="EnDecLab Logo" style="height: 40px; width: auto;" loading="eager" fetchpriority="high" />
+    <div>
+      <span class="crypto">EnDec</span><span class="lab">Lab</span>
+    </div>
+  </a>
+  <button class="hamburger" id="hamburger-menu" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <nav class="main-nav" id="main-nav">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn" aria-haspopup="true" aria-expanded="false">Labs <span class="dropdown-arrow"></span></a>
+        <div class="dropdown-content">
+          <a href="/cipher-lab">Cipher Lab</a>
+          <a href="/signature-lab">Signature Lab</a>
+          <a href="/steganography-lab">Steganography Lab</a>
+          <a href="/file-encryption-lab">File Encryption Lab</a>
+        </div>
+      </li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/documentation">Documentation</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+  </nav>
+</header>
+<div class="hexagon-pattern"></div> 

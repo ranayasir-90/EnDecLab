@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | EnDecLab Cryptography Learning Platform</title>
+  
+  <!-- Page-specific SEO -->
+  <meta name="description" content="Privacy Policy for EnDecLab - Learn how we protect your data & privacy while using our cryptography learning platform. No personal data collection, local processing only.">
+  <meta name="keywords" content="privacy policy, EnDecLab privacy, data protection, cryptography platform privacy, educational privacy, no data collection, local processing, security platform privacy">
+  
+  <!-- Open Graph for Privacy -->
+  <meta property="og:title" content="Privacy Policy | EnDecLab Data Protection">
+  <meta property="og:description" content="Privacy Policy for EnDecLab - Learn how we protect your data and privacy while using our cryptography learning platform and interactive labs.">
+  <meta property="og:url" content="https://endeclab.xyz/privacy">
+  
+  <!-- Twitter Card for Privacy -->
+  <meta property="twitter:title" content="Privacy Policy | EnDecLab Data Protection">
+  <meta property="twitter:description" content="Privacy Policy for EnDecLab - Learn how we protect your data and privacy while using our cryptography learning platform and interactive labs.">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://endeclab.xyz/privacy">
+  
+  <%- include('partials/head') %>
+  
+  <!-- Privacy Page Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Privacy Policy",
+    "description": "Privacy policy page for EnDecLab cryptography learning platform",
+    "url": "https://endeclab.xyz/privacy",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "EnDecLab",
+      "url": "https://endeclab.xyz/"
+    }
+  }
+  </script>
+</head>
+<body class="privacy">
+  <%- include('partials/header') %>
+  <section class="privacy-hero">
+    <div class="privacy-hero-content">
+      <div class="privacy-hero-left">
+        <h1 class="privacy-title-gradient">Privacy Policy</h1>
+        <div class="privacy-tagline">Your privacy and security are our top priority</div>
+        <div class="privacy-intro">This policy explains how EnDecLab protects your data and privacy across all labs and features. We are committed to transparency and user safety.</div>
+      </div>
+      <div class="privacy-hero-right">
+        <svg class="privacy-hero-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="32" cy="32" r="30" stroke="#00d8ff" stroke-width="4" fill="rgba(0,216,255,0.08)"/>
+          <path d="M32 20a8 8 0 0 1 8 8c0 4.5-3.5 6.5-6.5 8.5-2.5 1.7-3.5 3-3.5 5.5" stroke="#00d8ff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="32" cy="46" r="2.5" fill="#00d8ff"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+  <main>
+    <section class="privacy-section border1">
+      <h2><i class="fas fa-user-secret"></i> Information We Collect</h2>
+      <ul>
+        <li><strong>Usage Data:</strong> We may collect non-personal information about how you interact with the platform (such as pages visited, features used, and browser type) to improve user experience. This is always anonymized and never linked to you.</li>
+        <li><strong>User Content:</strong> Any files, text, or data you upload or process in any lab (Cipher, Signature, Steganography, File Encryption) are handled in-session and are not stored after your session ends.</li>
+        <li><strong>No Account Required:</strong> You do not need to create an account or provide personal information to use EnDecLab. All labs and features are accessible anonymously.</li>
+      </ul>
+    </section>
+    <section class="privacy-section border2">
+      <h2><i class="fas fa-shield-alt"></i> How We Use Your Information</h2>
+      <ul>
+        <li>To operate and improve the platform and its features, including all labs and resources.</li>
+        <li>To analyze usage trends and enhance educational value for users.</li>
+        <li>We do not sell, rent, or share your data with third parties for marketing or advertising purposes.</li>
+      </ul>
+    </section>
+    <section class="privacy-section border3">
+      <h2><i class="fas fa-cookie-bite"></i> Cookies and Tracking</h2>
+      <ul>
+        <li>EnDecLab may use cookies or similar technologies to enhance your experience (such as remembering preferences or session state).</li>
+        <li>You can disable cookies in your browser settings, but some features (like session persistence) may not work as intended.</li>
+        <li>No third-party tracking or analytics cookies are used.</li>
+      </ul>
+    </section>
+    <section class="privacy-section border4">
+      <h2><i class="fas fa-external-link-alt"></i> Third-Party Services</h2>
+      <ul>
+        <li>We do not integrate with third-party analytics or advertising services that track you across the web.</li>
+        <li>External links on the platform (e.g., to books or resources) are not covered by this Privacy Policy. Please review the privacy policies of any third-party sites you visit.</li>
+      </ul>
+    </section>
+    <section class="privacy-section border5">
+      <h2><i class="fas fa-lock"></i> Data Security</h2>
+      <ul>
+        <li>We take reasonable measures to protect your information, but no web application is completely secure.</li>
+        <li>All cryptographic operations (encryption, decryption, signing, steganography) are performed in your browser. Files and keys are never uploaded to the server.</li>
+        <li>Do not use EnDecLab for processing sensitive, confidential, or real-world data. The platform is for educational use only.</li>
+      </ul>
+    </section>
+    <section class="privacy-section border1">
+      <h2><i class="fas fa-user-check"></i> Your Rights</h2>
+      <ul>
+        <li>Since we do not store personal data, there is no user data to access, modify, or delete.</li>
+        <li>If you have questions about your privacy, please contact us via the <a href="/contact">Contact</a> page.</li>
+      </ul>
+    </section>
+    <section class="privacy-section border2">
+      <h2><i class="fas fa-sync-alt"></i> Changes to This Policy</h2>
+      <ul>
+        <li>We may update this Privacy Policy from time to time. Continued use of the platform after changes constitutes acceptance of the new policy.</li>
+        <li>Last updated: <%= new Date().toLocaleDateString() %></li>
+      </ul>
+    </section>
+  </main>
+  <%- include('partials/footer') %>
+</body>
+</html> 

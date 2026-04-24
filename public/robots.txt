@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://endeclab.xyz/sitemap.xml
+
+# Allow all important pages
+Allow: /cipher-lab
+Allow: /signature-lab
+Allow: /steganography-lab
+Allow: /file-encryption-lab
+Allow: /resources
+Allow: /about
+Allow: /contact
+Allow: /faq
+Allow: /documentation
+Allow: /status
+
+# Allow static resources
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# Disallow admin or private areas (if any in future)
+Disallow: /admin/
+Disallow: /private/

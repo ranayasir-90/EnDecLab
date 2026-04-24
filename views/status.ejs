@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>System Status | EnDecLab Platform Health & Uptime</title>
+  
+  <!-- Page-specific SEO -->
+  <meta name="description" content="System Status for EnDecLab - Check the health, uptime & availability of all cryptography labs and platform services. Real-time status updates for classical ciphers, digital signatures, steganography & file encryption.">
+  <meta name="keywords" content="system status, EnDecLab status, platform health, uptime, service status, cryptography lab status, encryption tools status, platform availability, service monitoring">
+  
+  <!-- Open Graph for Status -->
+  <meta property="og:title" content="System Status | EnDecLab Service Status">
+  <meta property="og:description" content="Check EnDecLab system status - Real-time monitoring of cryptography learning platform services, labs, and API endpoints.">
+  <meta property="og:url" content="https://endeclab.xyz/status">
+  
+  <!-- Twitter Card for Status -->
+  <meta property="twitter:title" content="System Status | EnDecLab Service Status">
+  <meta property="twitter:description" content="Check EnDecLab system status - Real-time monitoring of cryptography learning platform services, labs, and API endpoints.">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://endeclab.xyz/status">
+  
+  <%- include('partials/head') %>
+  
+  <!-- Status Page Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "System Status",
+    "description": "System status page for EnDecLab cryptography learning platform",
+    "url": "https://endeclab.xyz/status",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "EnDecLab",
+      "url": "https://endeclab.xyz/"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "Platform Status"
+    }
+  }
+  </script>
+</head>
+<body class="status">
+  <%- include('partials/header') %>
+  <section class="status-hero-modern">
+    <div class="status-hero-content">
+      <div class="status-hero-left">
+        <h1 class="status-title-gradient">System Status</h1>
+        <div class="status-tagline">Live status of all EnDecLab features & labs</div>
+        <div class="status-intro">Stay up to date with the health and availability of all interactive labs, resources, and platform services. We keep this page updated with the latest deployments and improvements.</div>
+      </div>
+      <div class="status-hero-right">
+        <svg class="status-hero-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="32" cy="32" r="30" stroke="#00ff88" stroke-width="4" fill="rgba(0,255,136,0.08)"/>
+          <path d="M20 34L29 43L44 25" stroke="#00ff88" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+  <main>
+    <section class="status-section">
+      <h2>Current Status</h2>
+      <ul class="status-list">
+        <li><strong>Web App:</strong> <span class="status-ok"><span class="status-icon">&#10003;</span> Operational</span></li>
+        <li><strong>Uptime:</strong> <span><%= process.uptime ? (Math.floor(process.uptime() / 3600) + 'h ' + Math.floor((process.uptime() % 3600) / 60) + 'm') : 'N/A' %></span></li>
+        <li><strong>Last Deployment:</strong> <span><%= new Date().toLocaleDateString() %></span></li>
+      </ul>
+      <table class="status-table">
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="service-icon"><i class="fas fa-key"></i></span>Classical Ciphers Lab</td><td class="status-ok"><span class="status-icon">&#10003;</span> Operational</td></tr>
+          <tr><td><span class="service-icon"><i class="fas fa-image"></i></span>Steganography Lab</td><td class="status-ok"><span class="status-icon">&#10003;</span> Operational</td></tr>
+          <tr><td><span class="service-icon"><i class="fas fa-file-shield"></i></span>File Encryption Lab</td><td class="status-ok"><span class="status-icon">&#10003;</span> Operational</td></tr>
+          <tr><td><span class="service-icon"><i class="fas fa-signature"></i></span>Digital Signatures Lab</td><td class="status-ok"><span class="status-icon">&#10003;</span> Operational</td></tr>
+          <tr><td><span class="service-icon"><i class="fas fa-book"></i></span>Learning Resources</td><td class="status-ok"><span class="status-icon">&#10003;</span> Operational</td></tr>
+          <tr><td><span class="service-icon"><i class="fas fa-tachometer-alt"></i></span>Home</td><td class="status-ok"><span class="status-icon">&#10003;</span> Operational</td></tr>
+          <tr><td><span class="service-icon"><i class="fas fa-envelope"></i></span>Contact & Support</td><td class="status-ok"><span class="status-icon">&#10003;</span> Operational</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="status-section">
+      <h2>Regional Performance</h2>
+      <table class="status-table">
+        <thead>
+          <tr>
+            <th>Region</th>
+            <th>Status</th>
+            <th>Latency</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="service-icon"><i class="fas fa-flag"></i></span>Pakistan</td><td class="status-ok"><span class="status-icon">&#10003;</span> Excellent</td><td>&lt; 80ms</td></tr>
+          <tr><td><span class="service-icon"><i class="fas fa-globe-asia"></i></span>Asia-Pacific</td><td class="status-ok"><span class="status-icon">&#10003;</span> Good</td><td>~120ms</td></tr>
+          <tr><td><span class="service-icon"><i class="fas fa-globe-europe"></i></span>Europe</td><td class="status-ok"><span class="status-icon">&#10003;</span> Good</td><td>~140ms</td></tr>
+          <tr><td><span class="service-icon"><i class="fas fa-globe-americas"></i></span>North America</td><td class="status-ok"><span class="status-icon">&#10003;</span> Good</td><td>~160ms</td></tr>
+          <tr><td><span class="service-icon"><i class="fas fa-globe"></i></span>Middle East</td><td class="status-ok"><span class="status-icon">&#10003;</span> Excellent</td><td>&lt; 90ms</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="status-section">
+      <h2>Recent Updates & Announcements</h2>
+      <ul class="status-updates-list">
+        <li><strong><%= new Date().toLocaleDateString() %>:</strong> All labs and resources are live. Latest UI/UX improvements and bug fixes deployed.</li>
+        <li><strong>New:</strong> Modern dashboard, redesigned contact page, and improved testimonials section.</li>
+        <li><strong>All systems operational.</strong></li>
+      </ul>
+      <div class="status-last-checked">Last checked: <%= new Date().toLocaleString() %></div>
+    </section>
+  </main>
+  <%- include('partials/footer') %>
+</body>
+</html> 

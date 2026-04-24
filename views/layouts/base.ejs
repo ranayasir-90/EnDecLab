@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title><%= title %> | EnDecLab</title>
+  
+  <!-- Critical CSS inline -->
+  <style>
+    /* Critical above-the-fold CSS */
+    :root {
+      --primary-color: #00d8ff;
+      --secondary-color: #00ffaa;
+      --accent-color: #ff00aa;
+      --dark-bg: #0a0a1a;
+      --darker-bg: #050510;
+      --light-text: #e0e0ff;
+      --lighter-text: #ffffff;
+      --dark-text: #a0a0c0;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Roboto Mono', monospace;
+      color: var(--light-text);
+      background-color: var(--dark-bg);
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+      padding-top: 80px;
+    }
+    .main-header {
+      height: 80px;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(10, 10, 26, 0.8);
+      backdrop-filter: blur(5px);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      transition: all 0.3s ease;
+    }
+    .logo {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(1.5rem, 4vw, 1.8rem);
+      font-weight: 700;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+    }
+    .crypto { color: var(--primary-color); }
+    .lab { color: var(--secondary-color); }
+    .main-nav ul {
+      display: flex;
+      list-style: none;
+    }
+    .main-nav li { margin-left: 1.5rem; }
+    .main-nav a {
+      color: var(--light-text);
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: all 0.3s;
+      min-width: 48px;
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+    .main-nav a:hover {
+      color: var(--lighter-text);
+      background-color: rgba(0, 216, 255, 0.1);
+    }
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background-color: var(--light-text);
+      transition: all 0.3s;
+    }
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      .main-nav { display: none; }
+      .main-nav.active { display: block; }
+    }
+  </style>
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="/images/logo.webp" as="image" type="image/webp">
+  <link rel="preload" href="/css/style.clean.css" as="style">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@300;500&display=swap" as="style">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/images/favicon-32x32.png">
+  
+  <!-- Non-critical CSS -->
+  <link rel="stylesheet" href="/css/style.clean.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/css/style.clean.css"></noscript>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@300;500&display=swap" rel="stylesheet">
+  
+  <!-- DNS prefetch for external resources -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
+</head>
+<body class="<%= bodyClass || '' %>">
+  <%- include('../partials/header') %>
+  
+  <main>
+    <%- body %>
+  </main>
+  
+  <%- include('../partials/footer') %>
+  
+  <!-- Defer non-critical JavaScript -->
+  <script src="/js/main.js" defer></script>
+  
+  <!-- Inline critical JavaScript -->
+  <script>
+    // Critical JS for immediate functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mobile menu toggle
+      const hamburger = document.getElementById('hamburger-menu');
+      const nav = document.getElementById('main-nav');
+      
+      if (hamburger && nav) {
+        hamburger.addEventListener('click', function() {
+          const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+          hamburger.setAttribute('aria-expanded', !isExpanded);
+          nav.classList.toggle('active');
+        });
+      }
+      
+      // Intersection Observer for animations
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in-view');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.dashboard-card, .why-point, .feature-mini, .creator-card').forEach(el => {
+          observer.observe(el);
+        });
+      }
+    });
+  </script>
+</body>
+</html> 
